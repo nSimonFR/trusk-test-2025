@@ -24,4 +24,8 @@ async function getDocumentUrl(docId: string) {
   return signedUrl;
 }
 
-export default getDocumentUrl;
+async function getDocumentUrlMocked(docId: string) {
+  return `https://pdfobject.com/pdf/sample.pdf`;
+}
+
+export default getDocumentUrlMocked;
