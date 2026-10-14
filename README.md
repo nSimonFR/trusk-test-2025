@@ -50,7 +50,7 @@ If time allows, we may also talk about:
 ```
 
 - **Data**: the back reads documents from a SQLite file, `back/data/documents.sqlite`. It is created and seeded on first start. Run `npm run db:reset` in `back/` to start over.
-- **S3**: no AWS account needed. `document-sdk-bootstrap.ts` always returns a public sample PDF; treat it as a real signed URL. The real signing code is kept next to it for reference.
+- **S3**: no AWS account needed. `document-sdk-bootstrap.ts` exposes one call, `getDocumentUrl(key, { expiresInSeconds })`, that returns a URL to open a document. Here it always returns a public sample PDF: treat it as a real signed URL.
 
 ## Running it
 
