@@ -1,6 +1,9 @@
 import Documents from "./components/documents";
+import { getDocuments } from "./lib/documents";
 
-export default function Page() {
+export default async function Page() {
+  const documents = await getDocuments();
+
   return (
     <div className="p-8 font-sans">
       <h1 className="mb-4 text-2xl font-bold">Document List</h1>
@@ -12,7 +15,7 @@ export default function Page() {
           </tr>
         </thead>
         <tbody>
-          <Documents />
+          <Documents documents={documents} />
         </tbody>
       </table>
     </div>

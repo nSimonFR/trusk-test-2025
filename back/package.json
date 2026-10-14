@@ -4,17 +4,39 @@
   "main": "index.js",
   "license": "UNLICENSED",
   "scripts": {
+    "build": "nest build",
     "dev": "nest start --watch",
+    "test": "jest",
     "db:reset": "rm -f data/documents.sqlite"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1150.0",
+    "@aws-sdk/s3-request-presigner": "^3.1150.0",
     "@nestjs/common": "^11.1.2",
     "@nestjs/core": "^11.1.2",
+    "@nestjs/platform-express": "^11.1.2",
     "better-sqlite3": "^11.10.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^11.0.7",
+    "@nestjs/testing": "^11.1.2",
     "@types/better-sqlite3": "^9.6.0",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.0",
+    "ts-jest": "^29.4.0",
     "typescript": "^5.8.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testEnvironment": "node"
   }
 }
