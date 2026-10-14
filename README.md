@@ -8,23 +8,29 @@ A small back-office lists documents: delivery notes, invoices, delivery photos. 
 
 > As a user, when I click **Open doc** on a row, the document opens in a new tab, through a **temporary signed URL**.
 
-That is all the ticket says. If something is unclear, ask: one of us plays the product owner.
+That is all the ticket says, on purpose.
 
-## What we expect
+## What we expect from you
 
-We won't ask you to write the whole feature. We want to see how you would approach it:
+**You won't write the feature.** This is about how you would build it. It takes about 45 minutes, in three moments:
 
-- where you start, and in what order;
-- what you would do yourself, and what you would hand to a coding agent, if anything;
-- how you would know it works before merging.
+1. **Read (about 4 minutes, no tools).** This README and the code.
+2. **Tell us your plan, out loud, without coding.**
+   - What you need to clarify first: ask us, one of us plays the product owner.
+   - Where you start, how you split the work, and in what order.
+   - What you do yourself, and what you would hand to a coding agent, if anything. If you would, what you would tell it.
+   - How you would know it is done and safe to merge.
+3. **Try one piece for real.** Near the end, pick one piece of your plan and run your usual AI assistant on it, prompts visible. Then read what it produced and tell us whether you would merge it, and why.
 
-Use the code to back your reasoning. The requirements may change along the way: that is on purpose, and the same for everyone.
+Along the way, the requirements will change (on purpose, and the same for everyone), and we will ask where things would live in NestJS and Next.js.
 
-Bonuses, if there is time left:
+There is no single right approach: straight into the code, a list of tasks, exploring first, with or without agents. What we look at is why you choose it, and how you check the result.
 
-- get rid of the `useEffect` that loads the list;
+If time allows, we may also talk about:
+
+- getting rid of the `useEffect` that loads the list;
 - loading and error states;
-- a test.
+- a test you would write first.
 
 ## Project layout
 
